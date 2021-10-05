@@ -24,7 +24,11 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           primarySwatch: Colors.red),
+<<<<<<< HEAD
       home: const MyHomePage(title: 'LAPASSSSS1111111'),
+=======
+      home: const MyHomePage(title: 'LAPA'),
+>>>>>>> appBar
     );
   }
 }
