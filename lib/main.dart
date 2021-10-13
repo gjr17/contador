@@ -12,19 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CONTADOR',
+      title: 'Curso Git-GitHUB',
       theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
-          primarySwatch: Colors.red),
-      home: const MyHomePage(title: 'LAPASSSSS'),
+          backgroundColor: Colors.redAccent, primarySwatch: Colors.red),
+      home: const MyHomePage(title: 'Curso Git-GitHUB'),
     );
   }
 }
@@ -48,7 +39,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 5;
+  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -57,25 +48,16 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter += 5;
+      _counter += 1;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(
           widget.title,
-          style: TextStyle(backgroundColor: Colors.redAccent),
         ),
       ),
       body: Center(
@@ -93,25 +75,26 @@ class _MyHomePageState extends State<MyHomePage> {
           //
           // Column has various properties to control how it sizes itself and
           // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
+          // center the children vertically; the m8ain axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Presionastes el boton estas veces (Manejar ansiedad):',
+            Text(
+              'Boton Presionado:',
+              style: TextStyle(color: Colors.redAccent, fontSize: 20),
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: TextStyle(color: Colors.redAccent, fontSize: 200),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'AUMENTO',
-        child: const Icon(Icons.account_box),
+        tooltip: 'Sumar',
+        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
