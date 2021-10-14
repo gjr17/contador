@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'Boton Presionado:',
-              style: TextStyle(color: Colors.redAccent, fontSize: 20),
+              style: TextStyle(color: Colors.redAccent, fontSize: ),
             ),
             Text(
               '$_counter',
